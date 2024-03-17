@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java.iml" filepath="$PROJECT_DIR$/.idea/Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaHamic/JavaHamic.iml" filepath="$PROJECT_DIR$/JavaHamic/JavaHamic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SingletonDesignPattern/SingletonDesignPattern.iml" filepath="$PROJECT_DIR$/SingletonDesignPattern/SingletonDesignPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StrategyDesignPattern/Tichket/Tichket.iml" filepath="$PROJECT_DIR$/StrategyDesignPattern/Tichket/Tichket.iml" />
+    </modules>
+  </component>
+</project>

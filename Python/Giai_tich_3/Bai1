@@ -1,0 +1,26 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Tính giá trị z tại các điểm trên mặt phẳng xy
+def z_function(x, y):
+    return 2 * x * y * (1 - x**2)
+
+# Tạo dữ liệu
+x = np.linspace(0, 2, 100)
+y = np.linspace(0, 4, 100)
+x, y = np.meshgrid(x, y)
+z = z_function(x, y)
+
+# Vẽ biểu đồ 3D
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(x, y, z, cmap='viridis')
+
+# Đặt tên cho trục
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+
+# Hiển thị biểu đồ
+plt.show()

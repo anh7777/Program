@@ -1,0 +1,35 @@
+import sympy as sp
+from sympy.integrals import integrate
+from sympy import symbols, exp
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Định nghĩa biến và hàm
+x, y = symbols('x y')
+expression = x**5 * y**3 * exp(x*y)
+
+# Tính giá trị chính xác của tích phân
+result = integrate(expression, (x, 0, 1), (y, 0, 1))
+print("Giá trị chính xác của tích phân:", result.evalf())
+
+# Vẽ khối mà thể tích được cho bởi tích phân
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+# Tạo dữ liệu cho bề mặt
+x_vals = np.linspace(0, 1, 100)
+y_vals = np.linspace(0, 1, 100)
+x_vals, y_vals = np.meshgrid(x_vals, y_vals)
+z_vals = x_vals**5 * y_vals**3 * np.exp(x_vals * y_vals)
+
+# Vẽ bề mặt 3D
+ax.plot_surface(x_vals, y_vals, z_vals, cmap='viridis')
+
+# Đặt tên cho trục
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+
+# Hiển thị biểu đồ
+plt.show()
